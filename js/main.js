@@ -26,12 +26,10 @@ for (let i = 0; i < main.length; i++) {
     main[i].style.gridAutoRows = `${boxWidth}px`;
 }
 
-
 // double check
 console.log(window.innerHeight, boxWidth);
 
-
-//
+// function to change box width
 function changeBoxWidth(Event) {
     for (let i = 0; i < main.length; i++) {
         boxWidth = document.querySelector(".mouse-log").clientWidth;
@@ -40,6 +38,7 @@ function changeBoxWidth(Event) {
     }
 }
 
+// event listener for changing box width
 window.addEventListener("resize", changeBoxWidth);
 
 /* boxes.forEach(applyWidth());
