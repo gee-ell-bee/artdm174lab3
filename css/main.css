@@ -66,8 +66,10 @@ main {
 
 section {
     border: 4px dashed;
+    width: 100%;
 }
 
+/* #region mouse-log */
 section.mouse-log {
     color: lightgray;
     padding: 1rem;
@@ -101,4 +103,15 @@ section.mouse-log table td {
 
 section.mouse-log table tr th:first-of-type {
     border-right: 1px solid;
+}
+/* #endregion */
+
+section.pink {
+    background-color: pink;
+    color: white;
+}
+
+section.orange {
+    background-color:orange;
+    color: white;
 }

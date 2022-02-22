@@ -13,11 +13,12 @@ document.addEventListener('mousemove', e => {
     cellY.innerText = e.clientY;
 });
 
-
 // create box actual height var
 let boxWidth = document.querySelector(".mouse-log").clientWidth;
 let main = document.getElementsByTagName("main");
 
+
+// double check
 console.log(boxWidth + "px", main);
 
 // loop for applying new dimensions
@@ -25,7 +26,21 @@ for (let i = 0; i < main.length; i++) {
     main[i].style.gridAutoRows = `${boxWidth}px`;
 }
 
-console.log(main);
+
+// double check
+console.log(window.innerHeight, boxWidth);
+
+
+//
+function changeBoxWidth(Event) {
+    for (let i = 0; i < main.length; i++) {
+        boxWidth = document.querySelector(".mouse-log").clientWidth;
+        main[i].style.gridAutoRows = `${boxWidth}px`;
+        console.log(window.innerWidth, boxWidth);
+    }
+}
+
+window.addEventListener("resize", changeBoxWidth);
 
 /* boxes.forEach(applyWidth());
 
