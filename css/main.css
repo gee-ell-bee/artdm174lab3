@@ -77,57 +77,61 @@ section {
     transition: all 1s ease-in-out;
 }
 
+section:hover {
+    cursor: pointer;
+}
+
 section h1 {
     font-size: 2rem;
 }
 
 /* #region mouse-log */
 
-.mouse-log {
-    background-color: white;
-    color: lightgray;
-}
+    .mouse-log {
+        background-color: white;
+        color: lightgray;
+    }
 
-section.mouse-log {
-    padding: 1rem;
-    border: 4px dashed;
-}
+    section.mouse-log {
+        padding: 1rem;
+        border: 4px dashed;
+    }
 
-section.mouse-log * {
-    margin: auto;
-    text-align: center;
-}
+    section.mouse-log * {
+        margin: auto;
+        text-align: center;
+    }
 
-section.mouse-log table {
-    margin: .5rem auto;
-    padding: .5rem;
-    border: 1px solid;
-}
+    section.mouse-log table {
+        margin: .5rem auto;
+        padding: .5rem;
+        border: 1px solid;
+    }
 
-section.mouse-log table th,
-section.mouse-log table td {
-    padding: .25rem;
-}
+    section.mouse-log table th,
+    section.mouse-log table td {
+        padding: .25rem;
+    }
 
-section.mouse-log table thead th {
-    letter-spacing: 1px;
-}
+    section.mouse-log table thead th {
+        letter-spacing: 1px;
+    }
 
-section.mouse-log table thead th {
-    padding: .25rem 2rem;
-}
+    section.mouse-log table thead th {
+        padding: .25rem 2rem;
+    }
 
-section.mouse-log table tbody {
-    font-size: 1.125rem;
-}
+    section.mouse-log table tbody {
+        font-size: 1.125rem;
+    }
 
-section.mouse-log table td {
-    text-align: center;
-}
+    section.mouse-log table td {
+        text-align: center;
+    }
 
-section.mouse-log table tr th:first-of-type {
-    border-right: 1px solid;
-}
+    section.mouse-log table tr th:first-of-type {
+        border-right: 1px solid;
+    }
 /* #endregion */
 
 .color {

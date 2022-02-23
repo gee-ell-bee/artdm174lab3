@@ -63,6 +63,14 @@ function expanding(e) {
     console.log(sections);
 };
 
+function retracting(e) {
+    if (e.target.classList.contains("expandBox")) {
+        e.target.classList.remove("expandBox");
+        // double check
+        console.log(sections);
+    }
+}
+
 // switching colors sections loop
 sections.forEach(section => {
 
@@ -71,8 +79,8 @@ sections.forEach(section => {
     section.addEventListener("mouseout", switching);
 
     // expand box event listener
-    section.addEventListener("mouseover",  expanding);
-    section.addEventListener("mouseout", expanding);
+    section.addEventListener("click",  expanding);
+    section.addEventListener("mouseout", retracting);
 });
 
 /* boxes.forEach(applyWidth());
