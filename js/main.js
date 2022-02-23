@@ -1,9 +1,10 @@
+// MOUSE TRACKER
 // create table cell variables
 let cellX = document.getElementById("xAxis");
 let cellY = document.getElementById("yAxis");
 
 // Event listener: when mouse moves, print values
-document.addEventListener('mousemove', e => {
+document.addEventListener("mousemove", e => {
     // finding X & Y values
     let mouseX = e.clientX;
     let mouseY = e.clientY;
@@ -13,6 +14,7 @@ document.addEventListener('mousemove', e => {
     cellY.innerText = e.clientY;
 });
 
+// BOX RESIZING
 // create box actual height var
 let boxWidth = document.querySelector(".mouse-log").clientWidth;
 let main = document.getElementsByTagName("main");
@@ -30,9 +32,9 @@ for (let i = 0; i < main.length; i++) {
 console.log(window.innerHeight, boxWidth);
 
 // function to change box width
-function changeBoxWidth(Event) {
+function changeBoxWidth(e) {
     for (let i = 0; i < main.length; i++) {
-        boxWidth = document.querySelector(".mouse-log").clientWidth;
+        let boxWidth = document.querySelector(".mouse-log").clientWidth;
         main[i].style.gridAutoRows = `${boxWidth}px`;
         console.log(window.innerWidth, boxWidth);
     }
@@ -40,6 +42,38 @@ function changeBoxWidth(Event) {
 
 // event listener for changing box width
 window.addEventListener("resize", changeBoxWidth);
+
+// REVERSE COLORS
+// identify the sections array
+let sections = document.querySelectorAll("section");
+
+
+// double check
+console.log(sections);
+
+function switching(e) {
+    e.target.classList.toggle("switchColors");
+    // double check
+    console.log(sections);
+};
+
+function expanding(e) {
+    e.target.classList.toggle("expandBox");
+    // double check
+    console.log(sections);
+};
+
+// switching colors sections loop
+sections.forEach(section => {
+
+    // switch colors function
+    section.addEventListener("mouseover",  switching);
+    section.addEventListener("mouseout", switching);
+
+    // expand box function
+    section.addEventListener("mouseover",  expanding);
+    section.addEventListener("mouseout", expanding);
+});
 
 /* boxes.forEach(applyWidth());
 
