@@ -59,11 +59,10 @@ body {
 
 main {
     background-color: white;
-    margin: 5rem auto;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
-
 }
 
 section {
@@ -85,7 +84,7 @@ section h1 {
     font-size: 2rem;
 }
 
-/* #region mouse-log */
+/* #region mouse-log section */
 
     .mouse-log {
         background-color: white;
@@ -134,46 +133,57 @@ section h1 {
     }
 /* #endregion */
 
-.color {
-    color: white;
-    font-size: 2.75rem;
-    font-weight: bold;
-    letter-spacing: 0px;
-}
 
-.red {
-    background-color:rgb(235, 88, 88);
-}
+/* #region color sections */
+    .color {
+        color: white;
+        font-size: 2.75rem;
+        font-weight: bold;
+        letter-spacing: 0px;
+    }
 
-.pink {
-    background-color: pink;
-}
+    .red {
+        background-color:rgb(235, 88, 88);
+    }
 
-.orange {
-    background-color:orange;
-}
+    .pink {
+        background-color: pink;
+    }
 
-.yellow {
-    background-color:rgb(255, 221, 128);
-}
+    .orange {
+        background-color:orange;
+    }
 
-.green {
-    background-color:darkseagreen;
-}
+    .yellow {
+        background-color:rgb(255, 221, 128);
+    }
 
-.teal {
-    background-color:rgb(131, 202, 202);
-}
+    .green {
+        background-color:darkseagreen;
+    }
 
-.blue {
-    background-color:rgb(108, 175, 218);
-}
+    .teal {
+        background-color:rgb(131, 202, 202);
+    }
 
-.switchColors {
-    color: black;
-    opacity: .5;
-}
+    .blue {
+        background-color:rgb(108, 175, 218);
+    }
+/* #endregion */
 
-.expandBox {
-    transform: scale(2);
-}
+/* #region togglers */
+
+    .switchColors {
+        color: rgba(0, 0, 0, 1);
+        opacity: .5;
+    }
+
+    .expandBox {
+        color: rgba(255, 255, 255, .5);
+        transform: scale(2);
+    }
+
+    section.mouse-log.expandBox {
+        color: rgba(0, 0, 0, .5);
+    }
+/* #endregion */

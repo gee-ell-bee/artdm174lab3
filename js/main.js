@@ -14,6 +14,13 @@ document.addEventListener("mousemove", e => {
     cellY.innerText = e.clientY;
 });
 
+// leaving document reset event listener
+document.addEventListener("mouseout", e => {
+    // print reset
+    cellX.innerText = "N/A";
+    cellY.innerText = "N/A";
+})
+
 // BOX RESIZING
 // create box actual height var
 let boxWidth = document.querySelector(".mouse-log").clientWidth;
@@ -21,7 +28,7 @@ let main = document.getElementsByTagName("main");
 
 
 // double check
-console.log(boxWidth + "px", main);
+//console.log(boxWidth + "px", main);
 
 // loop for applying new dimensions
 for (let i = 0; i < main.length; i++) {
@@ -29,14 +36,15 @@ for (let i = 0; i < main.length; i++) {
 }
 
 // double check
-console.log(window.innerHeight, boxWidth);
+//console.log(window.innerHeight, boxWidth);
 
 // function to change box width
 function changeBoxWidth(e) {
     for (let i = 0; i < main.length; i++) {
         let boxWidth = document.querySelector(".mouse-log").clientWidth;
         main[i].style.gridAutoRows = `${boxWidth}px`;
-        console.log(window.innerWidth, boxWidth);
+        // double check
+        //console.log(window.innerWidth, boxWidth);
     }
 }
 
@@ -49,25 +57,25 @@ let sections = document.querySelectorAll("section");
 
 
 // double check
-console.log(sections);
+//console.log(sections);
 
 function switching(e) {
     e.target.classList.toggle("switchColors");
     // double check
-    console.log(sections);
+    //console.log(sections);
 };
 
 function expanding(e) {
     e.target.classList.toggle("expandBox");
     // double check
-    console.log(sections);
+    //console.log(sections);
 };
 
 function retracting(e) {
     if (e.target.classList.contains("expandBox")) {
         e.target.classList.remove("expandBox");
         // double check
-        console.log(sections);
+        //console.log(sections);
     }
 }
 
