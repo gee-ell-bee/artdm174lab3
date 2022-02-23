@@ -59,7 +59,10 @@ let sections = document.querySelectorAll("section");
 // double check
 //console.log(sections);
 
+// switching colors function
 function switching(e) {
+    e.stopPropagation();
+    console.log(e);
     e.target.classList.toggle("switchColors");
     // double check
     //console.log(sections);

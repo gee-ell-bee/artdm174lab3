@@ -97,6 +97,10 @@ section:hover {
     z-index: 3;
 }
 
+section * {
+    pointer-events: none;
+}
+
 section h1 {
     font-size: 2rem;
 }
