@@ -66,11 +66,11 @@ function expanding(e) {
 // switching colors sections loop
 sections.forEach(section => {
 
-    // switch colors function
+    // switch colors event listener
     section.addEventListener("mouseover",  switching);
     section.addEventListener("mouseout", switching);
 
-    // expand box function
+    // expand box event listener
     section.addEventListener("mouseover",  expanding);
     section.addEventListener("mouseout", expanding);
 });
