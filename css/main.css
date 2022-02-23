@@ -84,6 +84,7 @@ section h1 {
 /* #region mouse-log */
 
 .mouse-log {
+    background-color: white;
     color: lightgray;
 }
 
