@@ -12,9 +12,6 @@ document.addEventListener("mousemove", e => {
     // print values
     cellX.innerText = e.clientX;
     cellY.innerText = e.clientY;
-
-    //logging event
-    console.log(e)
 });
 
 // leaving document reset event listener
@@ -23,8 +20,7 @@ document.addEventListener("mouseout", e => {
     cellX.innerText = "N/A";
     cellY.innerText = "N/A";
 
-    // logging event
-    console.log(e);
+
 })
 
 // BOX RESIZING
@@ -39,7 +35,6 @@ let main = document.getElementsByTagName("main");
 // loop for applying new dimensions
 for (let i = 0; i < main.length; i++) {
     main[i].style.gridAutoRows = `${boxWidth}px`;
-    console.log(e);
 }
 
 // double check
@@ -50,9 +45,8 @@ function changeBoxWidth(e) {
     for (let i = 0; i < main.length; i++) {
         let boxWidth = document.querySelector(".mouse-log").clientWidth;
         main[i].style.gridAutoRows = `${boxWidth}px`;
-
         // double check
-        console.log(e);
+        //console.log(window.innerWidth, boxWidth);
     }
 }
 
@@ -73,13 +67,14 @@ function switching(e) {
     console.log(e);
     e.target.classList.toggle("switchColors");
     // double check
-    console.log(e);
+    //console.log(sections);
 };
 
 function expanding(e) {
     e.target.classList.toggle("expandBox");
-    // double check
     console.log(e);
+    // double check
+    //console.log(sections);
 };
 
 function retracting(e) {
